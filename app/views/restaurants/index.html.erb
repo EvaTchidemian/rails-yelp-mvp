@@ -1,0 +1,8 @@
+<h1 class="card-header">index</h1>
+  <ul class="card-body">
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant)%></li>
+    <% end %>
+  </ul>
+
+<%= link_to "Add a restaurant", new_restaurant_path %>
